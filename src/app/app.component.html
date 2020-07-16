@@ -1,24 +1,20 @@
-<h1>
-  Lista 1000 najpopularniejszych filmów
-</h1>
-
-<ng-container *ngIf="movies$ | async as movies; else loading">
-
-  <ng-container *ngIf="movies.length; else empty">
-    <div class="item" *ngFor="let movie of movies; let i=index">
-
-      <div class="index">{{ i+1 }}.</div>
-
-      <app-movie [movie]="movie">
-      </app-movie>
-
-    </div>
+<cdk-virtual-scroll-viewport itemSize="400" class="scroll-viewport">
+  <h1>
+    Lista 1000 najpopularniejszych filmów
+  </h1>
+  <ng-container *ngIf="movies$ | async as movies; else loading">
+    <ng-container *ngIf="movies.length; else empty">
+      <div *cdkVirtualFor="let movie of movies; let i=index;" class="item">
+        <div class="index">{{ i+1 }}.</div>
+        <app-movie [movie]="movie">
+        </app-movie>
+      </div>
+    </ng-container>
+    <ng-template #empty>
+      <p class="p">Nie ma żadnych filmów.</p>
+    </ng-template>
   </ng-container>
-  <ng-template #empty>
-    <p>Nie ma żadnych filmów.</p>
+  <ng-template #loading>
+    <p class="p">Trwa ładowanie...</p>
   </ng-template>
-
-</ng-container>
-<ng-template #loading>
-  <p>Trwa ładowanie...</p>
-</ng-template>
+</cdk-virtual-scroll-viewport>
