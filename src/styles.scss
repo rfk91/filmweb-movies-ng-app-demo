@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0.5rem 3rem 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.p {
+  padding: 1rem;
+}
+
+.mr {
+  margin-right: 1rem;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+
+.img-fluid {
+  width: 160px;
+  height: auto;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+}
+
+.desc {
+  background: #f5f5f5;
+  border-radius: 2px;
+}
+
+.index {
+  margin-bottom: 0.5rem;
+}

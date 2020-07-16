@@ -1,0 +1,12 @@
+<div class="p mr">
+  <img class="img-fluid" [src]="movie.poster" [alt]="movie.title">
+</div>
+
+<div class="p">
+  <h2>{{ movie.title }} ({{ movie.year }})</h2>
+  <h3 *ngIf="movie.originalTitle !== movie.title">{{ movie.originalTitle }}</h3>
+  <p>
+    Ocena: {{ movie.rate }}
+  </p>
+  <p class="p desc">{{ movie.description }}</p>
+</div>
