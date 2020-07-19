@@ -1,6 +1,6 @@
 <cdk-virtual-scroll-viewport itemSize="400" minBufferPx="400" maxBufferPx="2000" class="scroll-viewport">
   <h1>
-    Lista 1000 najpopularniejszych filmów
+    Lista 10000 najpopularniejszych filmów
   </h1>
   <ng-container *ngIf="movies$ | async as movies; else loading">
     <ng-container *ngIf="movies.length; else empty">

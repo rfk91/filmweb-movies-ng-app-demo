@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Movie } from './movie.model';
 
 const RESULT_FILE: string =
-  'https://raw.githubusercontent.com/rfk91/filmweb-movies/master/gen/result.json';
+  'https://raw.githubusercontent.com/rfk91/filmweb-movies/master/gen3/result.json';
 
 @Component({
   selector: 'app-root',
